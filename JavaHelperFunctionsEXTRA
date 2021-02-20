@@ -1,0 +1,52 @@
+package com.company; //Change to the package your using
+
+import java.util.Scanner;
+
+public class HelperFunctions {
+
+    public static void main(String[] args) {
+        // Used to test Helper Functions
+
+        }
+/*
+    THESE ARE HELPER FUNCTIONS AND
+    MUST BE IN THE SAME CLASS AS THE MAIN
+    METHOD YOU WANT TO USE THEM WITH
+
+*/
+    // Input Statements
+    public static double inputDBL(String prompt){ //Asks for Float Input (Requires String Prompt)
+
+        Scanner input = new Scanner(System.in);
+        System.out.println(prompt);
+        return input.nextDouble();
+    }
+
+    public static String inputSTR(String prompt){ //Asks for String Input (Requires String Prompt)
+
+        Scanner input = new Scanner(System.in);
+        System.out.println(prompt);
+        return input.nextLine();
+    }
+
+    public static int inputINT(String prompt){ //Asks for Integer Input (Requires Integer Prompt)
+        Scanner input = new Scanner(System.in);
+        System.out.println(prompt);
+        return input.nextInt();
+    }
+    // Output Statements
+    public static void print(String data){System.out.println(data);  } //Creates  print(""); message function for strings
+    public static void print(int data){System.out.println(data);} //Creates  print(""); message function for integer
+    public static void print(double data){System.out.println(data); } //Creates  print(""); message function for floats
+    public static void print(boolean data){System.out.println(data);} //Creates  print(""); message function for Boolean
+
+    // Convert from string to Datatype Statements
+    public static int convertINT(String data){int integerVar = Integer.parseInt(data); return integerVar; } //Converts String Input to Integer
+    public static double convertDBL(String data){double doubleVar = Double.parseDouble(data); return doubleVar; } //Converts String Input to double
+    public static boolean convertBOOL(String data){boolean booleanVar = Boolean.parseBoolean(data); return booleanVar; } //Converts String to Boolean
+
+    // Verify Data type statements
+    public static boolean verifyINT(String data){try {int integerVar = Integer.parseInt(data);} catch(NumberFormatException e){return false;} return true;} //Verifies it is Integer returns bool
+    public static boolean verifyDBL(String data){try {double doubleVar = Double.parseDouble(data);} catch(NumberFormatException e){return false;} return true;} //Verifies it is Float returns bool
+    public static boolean verifyBOOL(String data){try {boolean booleanVar = Boolean.parseBoolean(data);} catch(NumberFormatException e){return false;} return true;} //Verifies it is Boolean returns bool
+}
